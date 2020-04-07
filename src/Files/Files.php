@@ -97,7 +97,7 @@ if (!function_exists(__NAMESPACE__.'\realise_directory')) {
             ));
 
             if (false == is_dir($path)) {
-                throw new Exceptions\Directory\UnableToCreateDirectoryException($path, 'directory could not be created for some unknown reason.');
+                throw new Exceptions\Directory\CreationFailedException($path, 'directory could not be created for some unknown reason.');
             }
         } catch (Cli\Exceptions\RunCommandFailedException $ex) {
             throw new Exceptions\Directory\CreationFailedException($path, $ex->getError());
