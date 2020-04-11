@@ -28,7 +28,7 @@ if (!function_exists(__NAMESPACE__."\create_symbolic_link")) {
         $name = $name ?? basename($target);
         $target = rtrim($target, '/');
 
-        if (false == Flags\is_flag_set($flags, FLAG_FORCE) && null !== $name && true == file_exists($name)) {
+        if (false == Flags\is_flag_set($flags, FLAG_FORCE) && true == file_exists(getcwd()."/{$name}")) {
             throw new Exceptions\Symlink\DestinationExistsException(getcwd()."/{$name}");
         }
 
