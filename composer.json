@@ -1,6 +1,5 @@
 {
     "name": "pointybeard/helpers-functions-files",
-    "version": "1.0.0",
     "description": "A collection of helpful functions related to creating and modifying files and directories",
     "homepage": "https://github.com/pointybeard/helpers-functions-files",
     "license": "MIT",
