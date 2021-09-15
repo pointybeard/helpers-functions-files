@@ -43,9 +43,9 @@ if (!function_exists(__NAMESPACE__."\create_symbolic_link")) {
         try {
             //symlink($target, $name);
             Cli\run_command(sprintf(
-                'ln --verbose --symbolic %s %s %s',
+                'ln -v -s %s %s %s',
                 true == Flags\is_flag_set($flags, FLAG_FORCE)
-                ? '--force'
+                ? '-f'
                 : null,
                 $target,
                 $name
